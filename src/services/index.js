@@ -32,7 +32,7 @@ class MainService{
     }
     static async  getByIdService(id){
 
-        const card = await DataModel.findOne(id)
+        const card = await DataModel.findById(id)
         if(!card){
             throw new ApiError(404,'Card not found')
         }
